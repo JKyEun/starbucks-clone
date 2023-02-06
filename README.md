@@ -1,1 +1,2 @@
-[코드 설명 및 공부 기록 노션 페이지](https://synonymous-island-173.notion.site/Starbucks-92960997a23c467c89c33ad735666811)
+- [코드 설명 및 공부 기록 노션 페이지](https://synonymous-island-173.notion.site/Starbucks-92960997a23c467c89c33ad735666811)
+- [배포된 사이트](https://jke-starbucks.netlify.app/)

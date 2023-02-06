@@ -1,34 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starbucks Kyung-eun</title>
-  <!--Favicon-->
-  <link rel="icon" href="./favicon.png" />
-  <!--Open Graph-->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Starbucks Kyung-eun" />
-  <meta property="og:title" content="Starbucks Coffee" />
-  <meta property="og:description" content="스타벅스 페이지 클론코딩입니다." />
-  <meta property="og:image" content="./images/starbucks_seo.jpg" />
-  <meta property="og:url" content="" />
-  <!--Twitter Card-->
-  <meta property="twitter:type" content="website" />
-  <meta property="twitter:site" content="Starbucks Kyung-eun" />
-  <meta property="twitter:title" content="Starbucks Coffee" />
-  <meta property="twitter:description" content="스타벅스 페이지 클론코딩입니다." />
-  <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
-  <meta property="twitter:url" content="" />
-  <!--Reset CSS-->
-  <link href="
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks Kyung-eun</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.png" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Starbucks Kyung-eun" />
+    <meta property="og:title" content="Starbucks Coffee" />
+    <meta property="og:description" content="스타벅스 페이지 클론코딩입니다." />
+    <meta property="og:image" content="./images/starbucks_seo.jpg" />
+    <meta property="og:url" content="" />
+    <!-- Twitter Card -->
+    <meta property="twitter:type" content="website" />
+    <meta property="twitter:site" content="Starbucks Kyung-eun" />
+    <meta property="twitter:title" content="Starbucks Coffee" />
+    <meta
+      property="twitter:description"
+      content="스타벅스 페이지 클론코딩입니다."
+    />
+    <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
+    <meta property="twitter:url" content="" />
+    <!-- Reset CSS -->
+    <link
+      href="
 https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
-" rel="stylesheet" />
-  <!--Main CSS-->
-  <link rel="stylesheet" href="./css/main.css" />
-</head>
-<body>
-  <h1>Hi</h1>
-</body>
+"
+      rel="stylesheet"
+    />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="inner">
+        <a href="#" class="logo">
+          <img src="./images/logo.png" alt="스타벅스 로고" />
+        </a>
+        <!-- Sub Menu -->
+        <div class="sub-menu">
+          <ul class="sub-menu__menu">
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">My Starbucks</a></li>
+            <li><a href="#">Customer Service & Ideas</a></li>
+            <li><a href="#">Find a Store</a></li>
+          </ul>
+          <div class="search">
+            <input type="text" />
+            <span class="material-symbols-outlined"> search </span>
+          </div>
+        </div>
+        <!-- Main Menu -->
+        <ul class="main-menu">
+          <li class="item">
+            <div class="item__name">COFFEE</div>
+            <div class="item__contents">
+              COFFEE
+              <div class="item__contents__menu"></div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">MENU</div>
+            <div class="item__contents">
+              MENU
+              <div class="item__contents__menu"></div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">STORE</div>
+            <div class="item__contents">
+              STORE
+              <div class="item__contents__menu"></div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">RESPONSIBILITY</div>
+            <div class="item__contents">
+              RESPON
+              <div class="item__contents__menu"></div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">STARBUCKS REWARDS</div>
+            <div class="item__contents">
+              STARBUCKS
+              <div class="item__contents__menu"></div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">CORPORATE SALES</div>
+            <div class="item__contents">
+              CORPORTATE
+              <div class="item__contents__menu"></div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item__name">WHAT'S NEW</div>
+            <div class="item__contents">
+              <div class="item__contents__menu"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </body>
 </html>
