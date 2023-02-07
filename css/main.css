@@ -23,7 +23,7 @@ img {
 
 .inner {
   position: relative;
-  width: 1100px;
+  width: 1080px;
   margin: 0 auto;
 }
 
@@ -144,7 +144,7 @@ header .inner .sub-menu .search > .material-symbols-outlined {
   margin: auto;
   right: 3px;
   top: 0;
-  bottom : 0;
+  bottom: 0;
   height: 24px;
 }
 
@@ -156,7 +156,8 @@ header .inner .main-menu {
   bottom: 0;
 }
 
-header .inner .main-menu .item {}
+header .inner .main-menu .item {
+}
 
 header .inner .main-menu .item:hover {
   cursor: pointer;
@@ -166,8 +167,8 @@ header .inner .main-menu .item:hover {
 }
 
 header .inner .main-menu .item .item__name {
-  padding: 10px 22px 34px 22px;
-  font-size: 13px
+  padding: 10px 25px 34px 25px;
+  font-size: 13px;
 }
 
 header .inner .main-menu .item .item__contents {
@@ -195,33 +196,82 @@ header .inner .main-menu .item .item__contents .item__contents__menu .inner {
   display: flex;
 }
 
-header .inner .main-menu .item .item__contents .item__contents__menu .inner > li {
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li {
   width: 200px;
   padding-right: 20px;
 }
 
-header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > a {
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > a {
   color: white;
   font-size: 14px;
   font-weight: 700;
 }
 
-header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > a:hover {
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul {
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > ul {
   margin-top: 15px;
 }
 
-header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul > li {
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > ul
+  > li {
   color: #999;
   font-size: 12px;
   margin: 5px 0;
 }
 
-header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul > li:hover {
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > ul
+  > li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -233,7 +283,7 @@ header .badges {
   left: calc(1100px + (100vw - 1100px) / 2);
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1420px) {
   header .badges {
     left: calc(100vw - 160px);
   }
@@ -244,7 +294,7 @@ header .badges .badge {
 }
 
 header .badges .badge img {
-  width: 140px;
+  width: 135px;
 }
 
 /* Visual */
@@ -265,10 +315,10 @@ header .badges .badge img {
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  width: 340px;
+  width: 24%;
   justify-content: center;
-  top: 9.5vw;
-  left: 1vw;
+  top: 27%;
+  left: 0;
 }
 
 .visual .inner .slogan img {
@@ -278,6 +328,8 @@ header .badges .badge img {
 .visual .inner .slogan a.btn {
   position: absolute;
   top: 13vw;
+  width: 6vw;
+  text-align: center;
 }
 
 .visual .inner img {
@@ -286,20 +338,20 @@ header .badges .badge img {
 
 .visual .inner img:nth-child(2) {
   width: 15vw;
-  top: 120px;
-  left: 340px;
+  top: 18%;
+  left: 34%;
 }
 
 .visual .inner img:nth-child(3) {
   width: 17vw;
-  top: 208px;
-  left: 538px;
+  top: 30%;
+  left: 50%;
 }
 
 .visual .inner img:nth-child(4) {
   width: 17vw;
-  top: 162px;
-  left: 762px;
+  top: 23%;
+  left: 70%;
 }
 
 /* NOTICE */
@@ -332,7 +384,7 @@ header .badges .badge img {
 
 .notice .notice-line .inner {
   display: flex;
-  height: 4.5vw;
+  height: 62px;
 }
 
 .notice .notice-line .inner .inner-left {
@@ -342,7 +394,7 @@ header .badges .badge img {
   height: 100%;
   background-color: #111111;
   align-items: center;
-  color:white;
+  color: white;
 }
 
 .notice .notice-line .inner .inner-left h1 {
@@ -357,7 +409,7 @@ header .badges .badge img {
 }
 .notice .notice-line .inner .inner-left a {
   position: absolute;
-  right: 20px;
+  right: 15px;
   color: white;
 }
 .notice .notice-line .inner .inner-left span {
@@ -377,7 +429,7 @@ header .badges .badge img {
 .notice .notice-line .inner .inner-right h1 {
   position: absolute;
   right: 120px;
-  font-size: 20px;
+  font-size: 17px;
 }
 .notice .notice-line .inner .inner-right a {
   position: absolute;
@@ -387,6 +439,26 @@ header .badges .badge img {
 .notice .notice-line .inner .inner-right span {
   font-size: 40px;
   vertical-align: bottom;
+}
+@media screen and (max-width: 1479px) {
+  .notice .notice-line .inner {
+    width: 900px;
+  }
+  .notice .notice-line .inner .inner-right h1 {
+    right: 50%;
+  }
+  .notice .notice-line .inner .inner-right a {
+    right: 25%;
+  }
+}
+
+@media screen and (min-width: 1479px) {
+  .notice .notice-line .inner .inner-left {
+    width: 58%;
+  }
+  .notice .notice-line .inner .inner-right {
+    width: 42%;
+  }
 }
 
 /* REWARDS */
@@ -432,19 +504,39 @@ header .badges .badge img {
   right: 0;
   bottom: 18px;
 }
-.rewards .inner .rewards__items .rewards__items__register .buttons .btn--register {
+.rewards
+  .inner
+  .rewards__items
+  .rewards__items__register
+  .buttons
+  .btn--register {
   background-color: #00703a;
   border-color: #00703a;
   color: white;
   margin-right: 6px;
 }
-.rewards .inner .rewards__items .rewards__items__register .buttons .btn--register:hover,
-.rewards .inner .rewards__items .rewards__items__register .buttons .btn--login:hover,
-.rewards .inner .rewards__items .rewards__items__card .buttons .btn--login:hover {
+.rewards
+  .inner
+  .rewards__items
+  .rewards__items__register
+  .buttons
+  .btn--register:hover,
+.rewards
+  .inner
+  .rewards__items
+  .rewards__items__register
+  .buttons
+  .btn--login:hover,
+.rewards
+  .inner
+  .rewards__items
+  .rewards__items__card
+  .buttons
+  .btn--login:hover {
   text-decoration: underline;
 }
 .rewards .inner .rewards__items .rewards__items__register .buttons .btn--login,
-.rewards .inner .rewards__items .rewards__items__card .buttons .btn--login  {
+.rewards .inner .rewards__items .rewards__items__card .buttons .btn--login {
   border-color: white;
   color: white;
 }
