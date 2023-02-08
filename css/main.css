@@ -10,7 +10,6 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
-  height: 3000px;
 }
 
 a {
@@ -52,6 +51,53 @@ img {
   text-decoration: underline;
 }
 
+.btn--brown {
+  color: #633510;
+  border-color: #633510;
+  transition: 0.6s;
+}
+
+.btn--brown:hover {
+  background-color: #633510;
+  color: white;
+  text-decoration: underline;
+}
+
+.btn--gold {
+  color: #966932;
+  border-color: #966932;
+  transition: 0.6s;
+}
+
+.btn--gold:hover {
+  background-color: #966932;
+  color: white;
+  text-decoration: underline;
+}
+
+.btn--white {
+  border-color: #fff;
+  color: #fff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.btn--white:hover {
+  background-color: #fff;
+  color: black;
+  text-decoration: underline;
+}
+
+.btn--black {
+  border-color: #000;
+  color: #000;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.btn--black:hover {
+  background-color: #000;
+  color: white;
+  text-decoration: underline;
+}
 /* HEADER */
 header {
   position: fixed;
@@ -154,9 +200,6 @@ header .inner .main-menu {
   position: absolute;
   right: 0;
   bottom: 0;
-}
-
-header .inner .main-menu .item {
 }
 
 header .inner .main-menu .item:hover {
@@ -555,3 +598,281 @@ header .badges .badge img {
   right: 0;
   bottom: 0;
 }
+
+/* ELSALVADOR */
+.elsalvador {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-image: url("../images/elsalvador_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .elsalvador {
+    height: 43vw;
+  }
+}
+
+.elsalvador .inner .elsalvador__item {
+  position: absolute;
+  width: 310px;
+  top: 50px;
+  left: 160px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
+}
+.elsalvador .inner .elsalvador__contents {
+  position: absolute;
+  top: 180px;
+  right: 140px;
+  transform: translateX(900px);
+  opacity: 0;
+  transition: 2.5s;
+}
+.elsalvador:hover .inner .elsalvador__item,
+.elsalvador:hover .inner .elsalvador__contents {
+  opacity: 1;
+  transform: translateX(0);
+}
+.elsalvador .inner .elsalvador__contents .item-text {
+  width: 340px;
+}
+.elsalvador .inner .elsalvador__contents .btn.btn--brown {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ETHIOPIA */
+.ethiopia {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/ethiopia_bg.png");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.ethiopia::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  display: block;
+  background-image: url("../images/ethiopia_before.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+.ethiopia::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background-image: url("../images/ethiopia_after.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 361px;
+  height: 400px;
+}
+
+.ethiopia .inner img.ethiopia__contents {
+  position: absolute;
+  top: 120px;
+  width: 496px;
+}
+.ethiopia .inner img.ethiopia__item {
+  position: absolute;
+  left: -500px;
+  opacity: 0;
+  transition: 1.5s;
+  transition-delay: 0.8s;
+}
+.ethiopia:hover .inner img.ethiopia__item {
+  opacity: 1;
+}
+.ethiopia .inner .btn.btn--gold {
+  position: absolute;
+  top: 280px;
+  left: 260px;
+}
+
+/* FAVORITE */
+.favorite {
+  position: relative;
+  background-image: url("../images/fav_bg.png");
+  height: 800px;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  background-position: -150px;
+}
+
+.favorite .text1 {
+  position: absolute;
+  width: 258px;
+  top: 120px;
+  left: 108px;
+  transition: 2s;
+  transform: translate(-700px);
+  opacity: 0;
+}
+.favorite .text2 {
+  position: absolute;
+  width: 362px;
+  top: 370px;
+  transition: 2.5s;
+  transform: translate(-700px);
+  opacity: 0;
+}
+.favorite:hover .text1,
+.favorite:hover .text2 {
+  opacity: 1;
+  transform: translate(0);
+}
+.favorite .pictures {
+  position: absolute;
+  width: 912px;
+  top: 100px;
+  right: -260px;
+}
+.favorite .btn.btn--white {
+  position: absolute;
+  top: 580px;
+  left: 238px;
+}
+
+/* MAGAZINE */
+.magazine {
+  position: relative;
+  background-image: URL("../images/magazine_bg.png");
+  background-repeat: no-repeat;
+  background-position: center 60px;
+  height: 400px;
+  overflow: hidden;
+}
+.magazine .inner .magazine__img {
+  position: absolute;
+  top: 0;
+  left: 680px;
+  opacity: 0;
+  transition: 2s;
+}
+.magazine:hover .inner .magazine__img {
+  opacity: 1;
+}
+.magazine .inner .magazine__text {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+}
+.magazine .inner .btn.btn--black {
+  position: absolute;
+  top: 280px;
+  left: 300px;
+}
+
+/* FIND STORE */
+.find-store {
+  position: relative;
+  background-image: URL("../images/store_bg.jpg");
+  background-size: cover;
+  height: 400px;
+  overflow: hidden;
+}
+.find-store .inner .image1 {
+  position: absolute;
+  left: 60px;
+  opacity: 0;
+  transition: 2s;
+}
+.find-store .inner .image2 {
+  position: absolute;
+  top: 150px;
+  left: 290px;
+  opacity: 0;
+  transition: 2s;
+}
+.find-store .inner .image3 {
+  position: absolute;
+  top: -60px;
+  left: 430px;
+  opacity: 0;
+  transition: 2s;
+}
+.find-store .inner .image4 {
+  position: absolute;
+  top: 300px;
+  left: 920px;
+  opacity: 0;
+  transition: 2s;
+}
+.find-store .inner .text1 {
+  position: absolute;
+  top: 100px;
+  left: 650px;
+  opacity: 0;
+  transform: translateX(700px);
+  transition: 2.5s;
+}
+.find-store .inner .text2 {
+  position: absolute;
+  top: 170px;
+  left: 651px;
+  opacity: 0;
+  transform: translateX(700px);
+  transition: 3s;
+}
+.find-store .inner .btn.btn--black {
+  position: absolute;
+  top: 290px;
+  left: 651px;
+  opacity: 0;
+  transform: translateX(700px);
+  transition: transform 3.5s, background-color 0.6s, color 0.6s, text-decoration 0.6s;
+}
+
+.find-store:hover .inner .text1,
+.find-store:hover .inner .text2,
+.find-store:hover .inner .btn.btn--black  {
+  transform: translateX(0);
+}
+.find-store:hover .inner .image1,
+.find-store:hover .inner .image2,
+.find-store:hover .inner .image3,
+.find-store:hover .inner .image4,
+.find-store:hover .inner .text1,
+.find-store:hover .inner .text2,
+.find-store:hover .inner .btn.btn--black {
+  opacity: 1;
+}
+
+/* FOOTER */
+footer {
+  
+}
+footer .inner {}
+
+/* FOOTER MENU */
+.footer__menu {}
+
+.footer__menu .left {}
+.footer__menu .left > ul {}
+.footer__menu .left > ul > li {}
+.footer__menu .left > ul > li > ul {}
+.footer__menu .left > ul > li > ul > a {}
+.footer__menu .left > ul > li > ul > li:nth-child(2) {}
+.footer__menu .left > ul > li > ul > li:nth-child(3) {}
+.footer__menu .left > ul > li > ul > li:nth-child(4) {}
+.footer__menu .left > ul > li > ul > li:nth-child(5) {}
+.footer__menu .left > ul > li > ul > li:nth-child(6) {}
+.footer__menu .left > ul > li > ul > li:nth-child(7) {}
+
+.footer__menu .right {}
+.footer__menu .right img {}
+
