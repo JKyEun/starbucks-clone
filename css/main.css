@@ -170,6 +170,10 @@ header .inner .sub-menu .search {
   top: 3px;
 }
 
+header .inner .sub-menu .search > span:hover {
+  cursor: pointer;
+}
+
 header .inner .sub-menu .search > input {
   width: 36px;
   height: 34px;
