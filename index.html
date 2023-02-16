@@ -43,6 +43,12 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/main.css" />
     <!-- Main JS -->
@@ -400,14 +406,25 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
         <div class="inner">
           <div class="inner-left">
             <h1>공지사항</h1>
-            <div>탄소중립포인트제 도입 안내</div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">탄소중립실천포인트제 도입 안내</div>
+                <div class="swiper-slide">시스템 개선 및 서비스 점검 안내</div>
+                <div class="swiper-slide">
+                  설 연휴 스타벅스 딜리버리 운영 안내
+                </div>
+                <div class="swiper-slide">
+                  스타벅스 카드 온라인 재충전 / e-Gift Card 구매 ...
+                </div>
+              </div>
+            </div>
             <a href="#">
               <span class="material-symbols-outlined"> add_circle </span>
             </a>
           </div>
           <div class="inner-right">
             <h1>스타벅스 프로모션</h1>
-            <a href="#">
+            <a class="toggle-promotion" href="javascript:void(0)">
               <span class="material-symbols-outlined">
                 expand_circle_down
               </span>
@@ -415,7 +432,46 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
           </div>
         </div>
       </div>
+      <div class="promotion hide">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./images/promotion1.jpg"
+                alt="스타벅스 프로모션 - 뉴이어 원두&커피"
+              />
+              <a href="#" class="btn btn--black">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/promotion2.jpg"
+                alt="스타벅스 프로모션 - 스타벅스 카드 결제시 혜택"
+              />
+              <a href="#" class="btn btn--black">자세히 보기</a>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/promotion3.jpg"
+                alt="스타벅스 프로모션 - 행운 가득한 신년 맞이하세요"
+              />
+              <a href="#" class="btn btn--black">자세히 보기</a>
+            </div>
+          </div>
+        </div>
+        <div id="pagination">
+          <div class="start-stop">
+            <span id="playBtn" class="material-symbols-outlined hidden">
+              play_arrow
+            </span>
+            <span id="pauseBtn" class="material-symbols-outlined"> pause </span>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </section>
+
     <!-- Rewards -->
     <section class="rewards">
       <div class="inner">

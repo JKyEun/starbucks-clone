@@ -4,6 +4,10 @@
 }
 
 /* COMMON */
+.hidden {
+  display: none;
+}
+
 body {
   color: #333;
   font-size: 16px;
@@ -106,7 +110,7 @@ header {
   background-color: #f6f5ef;
   border-top: 2px solid black;
   border-bottom: 1px solid #eae7e2;
-  z-index: 1;
+  z-index: 100;
 }
 
 header > .inner {
@@ -370,6 +374,12 @@ header .badges .badge img {
 
 .visual .inner .slogan img {
   width: 18vw;
+  opacity: 0;
+}
+
+.visual.animate .inner .slogan img {
+  transition: 0.4s;
+  opacity: 1;
 }
 
 .visual .inner .slogan a.btn {
@@ -387,18 +397,39 @@ header .badges .badge img {
   width: 15vw;
   top: 18%;
   left: 34%;
+  opacity: 0;
+}
+
+.visual.animate .inner img:nth-child(2) {
+  transition: 0.4s;
+  opacity: 1;
+  transition-delay: 0.4s;
 }
 
 .visual .inner img:nth-child(3) {
   width: 17vw;
   top: 30%;
   left: 50%;
+  opacity: 0;
+}
+
+.visual.animate .inner img:nth-child(3) {
+  transition: 0.4s;
+  opacity: 1;
+  transition-delay: 0.8s;
 }
 
 .visual .inner img:nth-child(4) {
   width: 17vw;
   top: 23%;
   left: 70%;
+  opacity: 0;
+}
+
+.visual.animate .inner img:nth-child(4) {
+  transition: 0.4s;
+  opacity: 1;
+  transition-delay: 1.2s;
 }
 
 /* NOTICE */
@@ -449,10 +480,15 @@ header .badges .badge img {
   left: 0;
   font-size: 16px;
 }
-.notice .notice-line .inner .inner-left div {
+.notice .notice-line .inner .inner-left .swiper {
   position: absolute;
+  height: 62px;
   left: 80px;
   font-size: 14px;
+}
+.notice .notice-line .inner .inner-left .swiper .swiper-wrapper .swiper-slide {
+  height: 62px;
+  line-height: 62px;
 }
 .notice .notice-line .inner .inner-left a {
   position: absolute;
@@ -508,6 +544,96 @@ header .badges .badge img {
   }
 }
 
+/* PROMOTION */
+.notice .promotion {
+  position: relative;
+  height: 658px;
+  background-color: #f6f5ef;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.notice .toggle-promotion.rotated {
+  transform: rotate(180deg);
+}
+
+.notice .promotion.hide {
+  height: 0px;
+}
+
+.notice .promotion .swiper {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(819px * 3 + 20px);
+  height: 553px;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.notice .promotion .swiper .swiper-wrapper .swiper-slide-active {
+  opacity: 1;
+}
+.notice .promotion .swiper .swiper-wrapper .swiper-slide .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80px;
+  text-align: center;
+}
+#pagination {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.start-stop {
+  position: relative;
+  bottom: 11px;
+  cursor: pointer;
+}
+.swiper-pagination {
+  position: relative;
+}
+.notice .promotion .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.notice .promotion .swiper-pagination-bullet-active {
+  background-image: url("../images/promotion_on.png");
+  background-size: cover;
+  background-color: transparent;
+}
+.notice .promotion .swiper-button-prev,
+.notice .promotion .swiper-button-next {
+  position: absolute;
+  top: 230px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  color: #333;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 10px;
+}
+.notice .promotion .swiper-button-prev::after,
+.notice .promotion .swiper-button-next::after {
+  font-size: 28px;
+}
+.notice .promotion .swiper-button-prev {
+  left: 50%;
+  transform: translateX(-500px);
+}
+.notice .promotion .swiper-button-next {
+  right: 50%;
+  transform: translateX(500px);
+}
 /* REWARDS */
 .rewards {
   position: relative;
@@ -637,8 +763,8 @@ header .badges .badge img {
   opacity: 0;
   transition: 2.5s;
 }
-.elsalvador:hover .inner .elsalvador__item,
-.elsalvador:hover .inner .elsalvador__contents {
+.elsalvador.animate .inner .elsalvador__item,
+.elsalvador.animate .inner .elsalvador__contents {
   opacity: 1;
   transform: translateX(0);
 }
@@ -697,7 +823,7 @@ header .badges .badge img {
   transition: 1.5s;
   transition-delay: 0.8s;
 }
-.ethiopia:hover .inner img.ethiopia__item {
+.ethiopia.animate .inner img.ethiopia__item {
   opacity: 1;
 }
 .ethiopia .inner .btn.btn--gold {
@@ -734,8 +860,8 @@ header .badges .badge img {
   transform: translate(-700px);
   opacity: 0;
 }
-.favorite:hover .text1,
-.favorite:hover .text2 {
+.favorite.animate .text1,
+.favorite.animate .text2 {
   opacity: 1;
   transform: translate(0);
 }
@@ -767,7 +893,7 @@ header .badges .badge img {
   opacity: 0;
   transition: 2s;
 }
-.magazine:hover .inner .magazine__img {
+.magazine.animate .inner .magazine__img {
   opacity: 1;
 }
 .magazine .inner .magazine__text {
@@ -842,18 +968,18 @@ header .badges .badge img {
     text-decoration 0.6s;
 }
 
-.find-store:hover .inner .text1,
-.find-store:hover .inner .text2,
-.find-store:hover .inner .btn.btn--black {
+.find-store.animate .inner .text1,
+.find-store.animate .inner .text2,
+.find-store.animate .inner .btn.btn--black {
   transform: translateX(0);
 }
-.find-store:hover .inner .image1,
-.find-store:hover .inner .image2,
-.find-store:hover .inner .image3,
-.find-store:hover .inner .image4,
-.find-store:hover .inner .text1,
-.find-store:hover .inner .text2,
-.find-store:hover .inner .btn.btn--black {
+.find-store.animate .inner .image1,
+.find-store.animate .inner .image2,
+.find-store.animate .inner .image3,
+.find-store.animate .inner .image4,
+.find-store.animate .inner .text1,
+.find-store.animate .inner .text2,
+.find-store.animate .inner .btn.btn--black {
   opacity: 1;
 }
 
