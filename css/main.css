@@ -594,10 +594,12 @@ header .badges .badge img {
   transform: translateX(-50%);
 }
 .start-stop {
+  display: flex;
   position: relative;
   bottom: 11px;
   cursor: pointer;
 }
+
 .swiper-pagination {
   position: relative;
 }
