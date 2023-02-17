@@ -96,28 +96,29 @@ window.onload = function () {
 
 // Scroll
 // Elsalvador
+// 현재 스크롤 위치에 따라 animate 클래스를 넣어 animation 효과를 주는 함수
 function showItemIfScroll() {
   if (window.scrollY > 60) {
     const elsalvadorSection = document.querySelector(".elsalvador");
     elsalvadorSection.classList.add("animate");
   }
 
-  if (window.scrollY > 557) {
+  if (window.scrollY > 600) {
     const ethiopiaSection = document.querySelector(".ethiopia");
     ethiopiaSection.classList.add("animate");
   }
 
-  if (window.scrollY > 950) {
+  if (window.scrollY > 1000) {
     const favoriteSection = document.querySelector(".favorite");
     favoriteSection.classList.add("animate");
   }
 
-  if (window.scrollY > 1765) {
+  if (window.scrollY > 2000) {
     const magazineSection = document.querySelector(".magazine");
     magazineSection.classList.add("animate");
   }
 
-  if (window.scrollY > 2153) {
+  if (window.scrollY > 2300) {
     const findStoreSection = document.querySelector(".find-store");
     findStoreSection.classList.add("animate");
   }
