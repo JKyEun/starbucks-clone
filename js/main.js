@@ -1,4 +1,4 @@
-// MAIN HEADER
+// HEADER
 // SEARCH
 const searchEl = document.querySelector(".search");
 const searchInputEl = searchEl.querySelector("input");
