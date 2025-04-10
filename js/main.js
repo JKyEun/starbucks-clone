@@ -91,27 +91,59 @@ window.onload = function () {
   visualSection.classList.add('animate');
 };
 
-// Scroll
-// Elsalvador
-// 현재 스크롤 위치에 따라 animate 클래스를 넣어 animation 효과를 주는 함수
+// Scroll Animation
+const sections = [
+  { selector: '.elsalvador', offset: 0.1 },
+  { selector: '.ethiopia', offset: 0.3 },
+  { selector: '.favorite', offset: 0.5 },
+  { selector: '.magazine', offset: 0.7 },
+  { selector: '.find-store', offset: 0.9 }
+];
+
+// DOM 요소를 미리 조회하여 저장
+const sectionElements = sections.map(({ selector, offset }) => ({
+  element: document.querySelector(selector),
+  offset
+}));
+
+// 윈도우 크기 관련 값을 전역으로 관리
+let windowHeight = window.innerHeight;
+let documentHeight = document.documentElement.scrollHeight - windowHeight;
+
+// 스로틀링 함수
+function throttle(func, limit) {
+  let inThrottle;
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+// 윈도우 크기 업데이트 함수
+function updateHeights() {
+  windowHeight = window.innerHeight;
+  documentHeight = document.documentElement.scrollHeight - windowHeight;
+}
+
+// 스크롤 애니메이션 함수
 function showItemIfScroll() {
-  const sections = [
-    { selector: '.elsalvador', offset: 0.1 },
-    { selector: '.ethiopia', offset: 0.3 },
-    { selector: '.favorite', offset: 0.5 },
-    { selector: '.magazine', offset: 0.7 },
-    { selector: '.find-store', offset: 0.9 }
-  ];
-
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.documentElement.scrollHeight - windowHeight;
-
-  sections.forEach(({ selector, offset }) => {
-    const section = document.querySelector(selector);
-    if (section && window.scrollY > documentHeight * offset) {
-      section.classList.add('animate');
+  sectionElements.forEach(({ element, offset }) => {
+    if (element) {
+      if (window.scrollY > documentHeight * offset) {
+        element.classList.add('animate');
+      } else {
+        element.classList.remove('animate');
+      }
     }
   });
 }
 
-window.addEventListener('scroll', showItemIfScroll);
+// 이벤트 리스너 등록
+window.addEventListener('resize', throttle(updateHeights, 100));
+window.addEventListener('scroll', throttle(showItemIfScroll, 100));
+
+// 초기 높이 설정
+updateHeights();
